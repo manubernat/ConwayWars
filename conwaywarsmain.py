@@ -33,6 +33,9 @@ def conwaywarsgame():
     # Horloge du jeu
     clock = pygame.time.Clock()
 
+    # Jeu
+    board = conway.Conway(background)
+
     # Boucle principale
     running = True
     while running:
@@ -45,6 +48,7 @@ def conwaywarsgame():
                 running = False
 
         screen.blit(background, (0, 0))
+        board.dessine()
         pygame.display.flip()
 
 
